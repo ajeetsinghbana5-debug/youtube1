@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Faceless YouTube Channels For Sale — Direct Owner Deal</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkbg: '#09090b',
+                        cardbg: '#121216',
+                        cardborder: '#27272a',
+                        whatsapp: '#25D366',
+                        whatsappDark: '#20ba5a'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.98); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.2s ease-out forwards;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #ffffff 30%, #a1a1aa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .accent-gradient-text {
+            background: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .channel-card {
+            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+        }
+        .channel-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(239, 68, 68, 0.4);
+            box-shadow: 0 12px 30px -10px rgba(239, 68, 68, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-darkbg text-zinc-100 font-sans min-h-screen selection:bg-red-500 selection:text-white">
+
+    <!-- Top Notice & WhatsApp Number Configurator Bar (Hidden from regular visitors/clients) -->
+    <div id="adminSetupBar" class="bg-gradient-to-r from-red-950 via-zinc-900 to-emerald-950 border-b border-zinc-800 text-xs py-2.5 px-4 hidden">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+            <div class="flex items-center gap-2 text-zinc-300">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span><b>Admin Panel:</b> Select country code & enter WhatsApp number.</span>
+            </div>
+            <div class="flex items-center gap-2 w-full sm:w-auto">
+                <div class="flex items-center flex-1 sm:w-auto gap-1">
+                    <!-- Country Code Selector -->
+                    <select 
+                        id="countryCodeSelect" 
+                        class="bg-zinc-950 border border-zinc-700 rounded-lg text-sm text-white py-1.5 px-2 focus:outline-none focus:border-emerald-500 transition cursor-pointer"
+                    >
+                        <option value="91">🇮🇳 +91 (India)</option>
+                        <option value="1">🇺🇸 +1 (USA/Canada)</option>
+                        <option value="44">🇬🇧 +44 (UK)</option>
+                        <option value="971">🇦🇪 +91 (UAE)</option>
+                        <option value="61">🇦🇺 +61 (Australia)</option>
+                        <option value="49">🇩🇪 +49 (Germany)</option>
+                        <option value="33">🇫🇷 +33 (France)</option>
+                        <option value="92">🇵🇰 +92 (Pakistan)</option>
+                        <option value="880">🇧🇩 +880 (Bangladesh)</option>
+                        <option value="966">🇸🇦 +966 (Saudi Arabia)</option>
+                        <option value="other">🌐 Other Code</option>
+                    </select>
+
+                    <input 
+                        type="tel" 
+                        id="sellerWhatsappInput" 
+                        maxlength="15"
+                        placeholder="9876543210" 
+                        class="w-full sm:w-44 px-3 py-1.5 bg-zinc-950 border border-zinc-700 rounded-lg text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-emerald-500 transition"
+                    >
+                </div>
+                <button 
+                    onclick="saveWhatsappNumber()" 
+                    class="px-3.5 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-semibold rounded-lg transition shadow-lg shadow-emerald-600/20 whitespace-nowrap cursor-pointer inline-flex items-center gap-1.5"
+                >
+                    <i data-lucide="check" class="w-4 h-4"></i>
+                    <span>Update Links</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom In-Page Admin Password Modal (Reliable across all browsers) -->
+    <div id="adminPasswordModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+        <div class="bg-zinc-900 border border-zinc-700 rounded-2xl max-w-sm w-full p-6 shadow-2xl animate-fade-in">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-xl bg-red-500/15 border border-red-500/30 text-red-400 flex items-center justify-center">
+                    <i data-lucide="lock" class="w-5 h-5"></i>
+                </div>
+                <div>
+                    <h3 class="font-display font-bold text-white text-base">Admin Security Check</h3>
+                    <p class="text-xs text-zinc-400">Number change karne ke liye password dalein</p>
+                </div>
+            </div>
+            <input 
+                type="password" 
+                id="adminPasswordInput" 
+                placeholder="Enter Password..." 
+                onkeydown="if(event.key==='Enter') verifyAdminPassword()"
+                class="w-full px-3.5 py-2.5 bg-zinc-950 border border-zinc-700 rounded-xl text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-red-500 mb-3"
+            >
+            <p id="adminPassError" class="text-xs text-red-400 mb-3 hidden">Galat password! Dobara koshish karein.</p>
+            <div class="flex items-center justify-end gap-2">
+                <button onclick="closeAdminModal()" class="px-4 py-2 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-zinc-300 text-xs font-semibold cursor-pointer">
+                    Cancel
+                </button>
+                <button onclick="verifyAdminPassword()" class="px-4 py-2 rounded-xl bg-red-600 hover:bg-red-500 text-white text-xs font-bold cursor-pointer">
+                    Unlock Admin
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="border-b border-zinc-800/80 bg-darkbg/90">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-xl bg-red-600 flex items-center justify-center shadow-lg shadow-red-600/30">
+                    <svg class="w-5 h-5 text-white fill-current" viewBox="0 0 24 24">
+                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                </div>
+                <span class="font-display font-extrabold text-xl tracking-tight text-white">My<span class="text-red-500">Channels</span></span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-400">
+                <a href="#channels" class="hover:text-white transition">My Channels (7)</a>
+                <a href="#how-it-works" class="hover:text-white transition">Transfer Process</a>
+                <a href="#faq" class="hover:text-white transition">FAQs</a>
+            </div>
+
+            <div class="flex items-center gap-2.5">
+                <!-- Live Seller Click Tracker Button -->
+                <button 
+                    onclick="toggleLeadsDrawer()" 
+                    class="relative inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-zinc-700/80 text-xs sm:text-sm font-semibold text-zinc-200 transition cursor-pointer"
+                    title="View Client Click Logs"
+                >
+                    <i data-lucide="bell-ring" class="w-4 h-4 text-amber-400"></i>
+                    <span class="hidden sm:inline">My Click Leads</span>
+                    <span id="leadsBadgeCount" class="px-1.5 py-0.5 text-[11px] font-extrabold rounded-md bg-red-600 text-white">0</span>
+                </button>
+
+                <a id="navWhatsappBtn" href="https://wa.me/91XXXXXXXXXX?text=Hi,%20I%20want%20to%20buy%20one%20of%20your%20YouTube%20channels." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-xl bg-emerald-600/15 hover:bg-emerald-600/25 border border-emerald-500/30 text-xs sm:text-sm font-semibold text-emerald-400 transition">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>Chat With Me</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative overflow-hidden pt-12 pb-16 sm:pt-20 sm:pb-24 border-b border-zinc-800/60">
+        <!-- Ambient Background Glows -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-red-600/15 blur-[120px] rounded-full pointer-events-none"></div>
+        <div class="absolute bottom-0 right-10 w-[350px] h-[250px] bg-emerald-500/10 blur-[100px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-xs sm:text-sm font-semibold mb-6">
+                <i data-lucide="user-check" class="w-4 h-4"></i>
+                <span>100% Direct Owner Sale • No Broker or Commission</span>
+            </div>
+
+            <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight max-w-4xl mx-auto leading-[1.15] mb-6">
+                <span class="gradient-text">Buy My Personal Faceless</span><br>
+                <span class="accent-gradient-text">YouTube Channels Directly</span>
+            </h1>
+
+            <p class="text-zinc-400 text-base sm:text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+                Main apne yeh 7 grown faceless YouTube channels direct sell kar raha hoon (₹499 se ₹1,999 tak). Koi middleman nahi—seedha mujhse WhatsApp par baat karein aur instant primary ownership transfer paayein.
+            </p>
+
+            <!-- Trust Badges -->
+            <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-6 mb-10">
+                <div class="flex items-center gap-2 px-4 py-2 rounded-xl bg-zinc-900/90 border border-zinc-800 text-xs sm:text-sm text-zinc-300">
+                    <i data-lucide="zap" class="w-4 h-4 text-amber-400"></i>
+                    <span>Direct Owner Handover</span>
+                </div>
+                <div class="flex items-center gap-2 px-4 py-2 rounded-xl bg-zinc-900/90 border border-zinc-800 text-xs sm:text-sm text-zinc-300">
+                    <i data-lucide="users" class="w-4 h-4 text-emerald-400"></i>
+                    <span>100% Real Organic Subscribers</span>
+                </div>
+                <div class="flex items-center gap-2 px-4 py-2 rounded-xl bg-zinc-900/90 border border-zinc-800 text-xs sm:text-sm text-zinc-300">
+                    <i data-lucide="shield-check" class="w-4 h-4 text-blue-400"></i>
+                    <span>Live Studio Proof Before Payment</span>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#channels" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-base shadow-lg shadow-red-600/25 transition flex items-center justify-center gap-2">
+                    <span>See My 7 Channels For Sale</span>
+                    <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                </a>
+                <a href="#how-it-works" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-zinc-200 font-semibold text-base transition">
+                    How I Transfer Ownership
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Channels Section -->
+    <section id="channels" class="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header & Controls -->
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
+            <div>
+                <h2 class="font-display text-2xl sm:text-3xl font-bold text-white mb-2">My Channels Available For Sale</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">Apni pasand ka channel chunein aur <span class="text-emerald-400 font-semibold">Buy Now</span> par click karein—channel ka naam aur price seedha mere WhatsApp par aa jayega.</p>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="relative w-full lg:w-72">
+                <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-500"></i>
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    onkeyup="filterChannels()"
+                    placeholder="Search channel or niche..." 
+                    class="w-full pl-10 pr-4 py-2.5 bg-zinc-900 border border-zinc-800 rounded-xl text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-red-500 transition"
+                >
+            </div>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-8 no-scrollbar" id="filterTabs">
+            <button onclick="setFilter('all', this)" class="filter-btn active px-4 py-2 rounded-xl text-sm font-semibold bg-red-600 text-white transition whitespace-nowrap cursor-pointer">
+                All Channels (7)
+            </button>
+            <button onclick="setFilter('10k', this)" class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold bg-zinc-900 text-zinc-400 hover:text-white border border-zinc-800 transition whitespace-nowrap cursor-pointer">
+                10K+ Subscribers
+            </button>
+            <button onclick="setFilter('under999', this)" class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold bg-zinc-900 text-zinc-400 hover:text-white border border-zinc-800 transition whitespace-nowrap cursor-pointer">
+                Budget Under ₹999
+            </button>
+            <button onclick="setFilter('kids', this)" class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold bg-zinc-900 text-zinc-400 hover:text-white border border-zinc-800 transition whitespace-nowrap cursor-pointer">
+                Kids & Animation
+            </button>
+        </div>
+
+        <!-- Responsive Channel Cards Grid -->
+        <div id="channelsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Cards injected dynamically via JS -->
+        </div>
+
+        <!-- Empty Search State -->
+        <div id="emptyState" class="hidden text-center py-16 bg-zinc-900/40 rounded-2xl border border-zinc-800">
+            <i data-lucide="folder-open" class="w-10 h-10 text-zinc-600 mx-auto mb-3"></i>
+            <h3 class="text-lg font-bold text-white mb-1">No channels found</h3>
+            <p class="text-zinc-400 text-sm">Try clearing your search or switching filter tabs.</p>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-16 sm:py-20 bg-zinc-950/80 border-y border-zinc-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-red-500 font-bold text-xs uppercase tracking-wider">100% Direct & Safe Deal</span>
+                <h2 class="font-display text-3xl font-bold text-white mt-2 mb-3">How I Will Transfer Your Channel</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">Seedha mujhse deal karein aur sirf 15 minute mein channel ki full ownership paayein.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="p-6 rounded-2xl bg-cardbg border border-cardborder relative">
+                    <div class="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 text-red-500 flex items-center justify-center font-display font-extrabold text-xl mb-5">
+                        1
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Select Your Channel</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Upar diye gaye mere 7 channels mein se apne budget (₹499 – ₹1,999) aur niche ke hisaab se channel select karein.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="p-6 rounded-2xl bg-cardbg border border-cardborder relative">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center font-display font-extrabold text-xl mb-5">
+                        2
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Message Me on WhatsApp</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        "Buy Now" button dabate hi channel ka naam aur price mere WhatsApp par aa jayega. Payment se pehle aap mujhse live Studio proof maang sakte hain.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="p-6 rounded-2xl bg-cardbg border border-cardborder relative">
+                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 flex items-center justify-center font-display font-extrabold text-xl mb-5">
+                        3
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Instant Primary Ownership</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Payment confirm hote hi main aapki Gmail ID ko Brand Account ka Primary Owner bana dunga ya full Gmail access handover kar dunga.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 sm:py-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="font-display text-3xl font-bold text-white mb-3">Frequently Asked Questions</h2>
+            <p class="text-zinc-400 text-sm sm:text-base">Channel kharidne se pehle aapke sawaalon ke seedhe jawaab.</p>
+        </div>
+
+        <div class="space-y-4">
+            <details class="group p-5 rounded-2xl bg-cardbg border border-cardborder cursor-pointer" open>
+                <summary class="flex items-center justify-between font-semibold text-white list-none">
+                    <span>Aap mujhe YouTube channel kaise transfer karenge?</span>
+                    <i data-lucide="chevron-down" class="w-4 h-4 text-zinc-500 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <p class="text-zinc-400 text-sm mt-3 leading-relaxed">
+                    Main aapki email ID ko Google Brand Account mein Primary Owner add kar dunga ya full Gmail ID & password recovery details ke saath handover karunga taaki 100% control aapke paas rahe.
+                </p>
+            </details>
+
+            <details class="group p-5 rounded-2xl bg-cardbg border border-cardborder cursor-pointer">
+                <summary class="flex items-center justify-between font-semibold text-white list-none">
+                    <span>Kya in channels par koi copyright strike hai?</span>
+                    <i data-lucide="chevron-down" class="w-4 h-4 text-zinc-500 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <p class="text-zinc-400 text-sm mt-3 leading-relaxed">
+                    Bilkul nahi! Mere sabhi channels par 0 copyright strikes aur 0 community guidelines strikes hain. Aap WhatsApp par mujhse live YouTube Studio screen recording maang kar check kar sakte hain.
+                </p>
+            </details>
+
+            <details class="group p-5 rounded-2xl bg-cardbg border border-cardborder cursor-pointer">
+                <summary class="flex items-center justify-between font-semibold text-white list-none">
+                    <span>Kya main baad mein channel ka naam aur handle badal sakta hoon?</span>
+                    <i data-lucide="chevron-down" class="w-4 h-4 text-zinc-500 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <p class="text-zinc-400 text-sm mt-3 leading-relaxed">
+                    Haan, ownership milne ke baad aap channel ka naam, @handle, logo aur banner kabhi bhi apne hisaab se change kar sakte hain.
+                </p>
+            </details>
+
+            <details class="group p-5 rounded-2xl bg-cardbg border border-cardborder cursor-pointer">
+                <summary class="flex items-center justify-between font-semibold text-white list-none">
+                    <span>Payment kaise kar sakte hain?</span>
+                    <i data-lucide="chevron-down" class="w-4 h-4 text-zinc-500 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <p class="text-zinc-400 text-sm mt-3 leading-relaxed">
+                    Aap UPI (GPay, PhonePe, Paytm) ya Bank Transfer se payment kar sakte hain. WhatsApp par message karein, main aapko details bhej dunga.
+                </p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-zinc-800/80 bg-zinc-950 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <div class="w-7 h-7 rounded-lg bg-red-600 flex items-center justify-center">
+                    <svg class="w-4 h-4 text-white fill-current" viewBox="0 0 24 24">
+                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                </div>
+                <span class="font-display font-bold text-white">MyChannels Direct Sale</span>
+                <span class="text-zinc-500 text-xs ml-2">• 100% Direct Owner Transfer</span>
+            </div>
+
+            <a id="footerWhatsappBtn" href="https://wa.me/91XXXXXXXXXX?text=Hi,%20I%20want%20to%20buy%20a%20YouTube%20channel%20from%20you." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-emerald-400 hover:text-emerald-300 font-medium transition">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>Direct WhatsApp Contact</span>
+            </a>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Message Preview Modal -->
+    <div id="previewModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+        <div class="bg-zinc-900 border border-zinc-700 rounded-2xl max-w-md w-full p-6 shadow-2xl relative animate-fade-in">
+            <button onclick="closePreviewModal()" class="absolute top-4 right-4 text-zinc-400 hover:text-white p-1.5 rounded-lg bg-zinc-800/80 cursor-pointer">
+                <i data-lucide="x" class="w-4 h-4"></i>
+            </button>
+            <div class="flex items-center gap-2.5 mb-4">
+                <div class="w-9 h-9 rounded-xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 flex items-center justify-center">
+                    <i data-lucide="message-square-text" class="w-5 h-5"></i>
+                </div>
+                <div>
+                    <h3 class="font-display font-bold text-white text-base">WhatsApp Auto-Message Preview</h3>
+                    <p class="text-xs text-zinc-400">Yeh exact message aapke WhatsApp par aayega</p>
+                </div>
+            </div>
+
+            <!-- Simulated WhatsApp Bubble -->
+            <div class="bg-[#0b141a] border border-emerald-900/50 rounded-xl p-4 mb-5">
+                <div class="bg-[#005c4b] text-[#e9edef] text-sm rounded-xl rounded-tr-none p-3.5 shadow-md whitespace-pre-line font-sans leading-relaxed" id="previewMessageContent">
+                </div>
+                <div class="text-right mt-1.5">
+                    <span class="text-[10px] text-zinc-400">Auto-generated via Buy Now • <i data-lucide="check-check" class="w-3 h-3 inline text-sky-400"></i></span>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-end gap-2.5">
+                <button onclick="closePreviewModal()" class="px-4 py-2 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-zinc-200 text-xs font-semibold transition cursor-pointer">
+                    Close
+                </button>
+                <a id="previewSendBtn" href="#" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-whatsapp hover:bg-whatsappDark text-zinc-950 font-bold text-xs transition inline-flex items-center gap-1.5">
+                    <i data-lucide="send" class="w-3.5 h-3.5"></i>
+                    <span>Test on WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Live Seller Click Tracker / Leads Drawer -->
+    <div id="leadsDrawerBackdrop" onclick="toggleLeadsDrawer()" class="fixed inset-0 z-50 hidden bg-black/75 backdrop-blur-xs transition-opacity"></div>
+    <aside id="leadsDrawer" class="fixed top-0 right-0 z-50 h-full w-full max-w-md bg-zinc-950 border-l border-zinc-800 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
+        <!-- Drawer Header -->
+        <div class="p-5 border-b border-zinc-800 flex items-center justify-between bg-zinc-900/60">
+            <div class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-xl bg-amber-500/15 border border-amber-500/30 text-amber-400 flex items-center justify-center">
+                    <i data-lucide="activity" class="w-5 h-5"></i>
+                </div>
+                <div>
+                    <h3 class="font-display font-bold text-white text-base">Seller Click Tracker</h3>
+                    <p class="text-xs text-zinc-400">Track kis channel & price par click hua</p>
+                </div>
+            </div>
+            <button onclick="toggleLeadsDrawer()" class="p-2 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-zinc-300 transition cursor-pointer">
+                <i data-lucide="x" class="w-4 h-4"></i>
+            </button>
+        </div>
+
+        <!-- Summary Stats -->
+        <div class="grid grid-cols-2 gap-3 p-4 border-b border-zinc-800/80 bg-zinc-900/30">
+            <div class="p-3 rounded-xl bg-zinc-900 border border-zinc-800">
+                <p class="text-[11px] text-zinc-400 uppercase font-semibold">Total Buy Clicks</p>
+                <p id="drawerTotalClicks" class="text-xl font-display font-extrabold text-white mt-0.5">0</p>
+            </div>
+            <div class="p-3 rounded-xl bg-zinc-900 border border-zinc-800">
+                <p class="text-[11px] text-zinc-400 uppercase font-semibold">Potential Value</p>
+                <p id="drawerTotalValue" class="text-xl font-display font-extrabold text-emerald-400 mt-0.5">₹0</p>
+            </div>
+        </div>
+
+        <!-- Logs List -->
+        <div id="leadsListContainer" class="flex-1 overflow-y-auto p-4 space-y-3">
+            <!-- Click logs rendered dynamically -->
+        </div>
+
+        <!-- Drawer Footer Actions -->
+        <div class="p-4 border-t border-zinc-800 bg-zinc-900/60 flex items-center justify-between gap-2">
+            <button onclick="exportLeadsLog()" class="flex-1 py-2.5 px-3 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-semibold transition inline-flex items-center justify-center gap-1.5 cursor-pointer">
+                <i data-lucide="copy" class="w-3.5 h-3.5 text-emerald-400"></i>
+                <span>Copy Report</span>
+            </button>
+            <button onclick="clearLeadsLog()" class="py-2.5 px-3 rounded-xl bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 text-xs font-semibold transition inline-flex items-center justify-center gap-1.5 cursor-pointer">
+                <i data-lucide="trash-2" class="w-3.5 h-3.5"></i>
+                <span>Reset</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Toast Notification Container -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+        <div class="bg-zinc-900 border border-emerald-500/40 text-white px-4 py-3 rounded-xl shadow-2xl flex items-center gap-3">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400"></i>
+            <span id="toastMessage" class="text-sm font-medium">WhatsApp links updated!</span>
+        </div>
+    </div>
+
+    <script>
+        // Exact 7 Channels Data
+        const channelsData = [
+            {
+                id: 1,
+                name: "Our Bharata",
+                handle: "@ourbharata",
+                subs: "1.17M",
+                subsNumeric: 1170000,
+                videos: "333",
+                niche: "Indian Stories & Culture",
+                categoryTags: ["10k"],
+                verified: true,
+                badgeText: "MEGA CHANNEL • VERIFIED",
+                badgeColor: "bg-amber-500/15 text-amber-400 border-amber-500/30",
+                avatarGradient: "from-zinc-800 to-black border-amber-500/40",
+                avatarIcon: "landmark",
+                avatarIconColor: "text-amber-400",
+                price: 1999,
+                originalPrice: 4999,
+                highlights: [
+                    "Verified Tick Badge (@ourbharata)",
+                    "1.17M+ Massive Organic Subscriber Base",
+                    "High-Retention Documentary Storytelling"
+                ]
+            },
+            {
+                id: 2,
+                name: "PolyFilms",
+                handle: "@PolyFilmsOfficial",
+                subs: "45.8K",
+                subsNumeric: 45800,
+                videos: "233",
+                niche: "3D Animation & Entertainment",
+                categoryTags: ["10k", "kids"],
+                verified: false,
+                badgeText: "BESTSELLER • 45K+ SUBS",
+                badgeColor: "bg-sky-500/15 text-sky-400 border-sky-500/30",
+                avatarGradient: "from-sky-500/20 to-blue-900/40 border-sky-500/40",
+                avatarIcon: "box",
+                avatarIconColor: "text-sky-400",
+                price: 1499,
+                originalPrice: 3499,
+                highlights: [
+                    "233 Ready-Made Animated Videos",
+                    "Evergreen Global & Kids Appeal",
+                    "Clean Strike-Free Channel History"
+                ]
+            },
+            {
+                id: 3,
+                name: "Casa reformada",
+                handle: "@Deimoshorts",
+                subs: "14.4K",
+                subsNumeric: 14400,
+                videos: "141",
+                niche: "AI Construction & Makeovers",
+                categoryTags: ["10k"],
+                verified: false,
+                badgeText: "VIRAL AI SHORTS NICHE",
+                badgeColor: "bg-orange-500/15 text-orange-400 border-orange-500/30",
+                avatarGradient: "from-amber-500/20 to-orange-900/40 border-orange-500/40",
+                avatarIcon: "home",
+                avatarIconColor: "text-orange-400",
+                price: 1199,
+                originalPrice: 2799,
+                highlights: [
+                    "Trending AI Home Makeover Shorts",
+                    "141 High-Views Viral Uploads",
+                    "100% Faceless AI Automation Ready"
+                ]
+            },
+            {
+                id: 4,
+                name: "Man Of Story",
+                handle: "@manofstorybd",
+                subs: "6.4K",
+                subsNumeric: 6400,
+                videos: "222",
+                niche: "Storytelling & Animated Tales",
+                categoryTags: ["under999", "kids"],
+                verified: false,
+                badgeText: "VALUE PICK • 222 VIDEOS",
+                badgeColor: "bg-emerald-500/15 text-emerald-400 border-emerald-500/30",
+                avatarGradient: "from-emerald-500/20 to-teal-900/40 border-emerald-500/40",
+                avatarIcon: "book-open",
+                avatarIconColor: "text-emerald-400",
+                price: 899,
+                originalPrice: 1999,
+                highlights: [
+                    "Rich Library of 222 Story Videos",
+                    "High Watch-Time Storytelling Niche",
+                    "Instant Ownership & Fast Transfer"
+                ]
+            },
+            {
+                id: 5,
+                name: "Sooper Bravo",
+                handle: "@sooperbravo",
+                subs: "6.36K",
+                subsNumeric: 6360,
+                videos: "185",
+                niche: "Kids Learning & Fun Songs",
+                categoryTags: ["under999", "kids"],
+                verified: false,
+                badgeText: "KIDS NICHE • HIGH RPM",
+                badgeColor: "bg-purple-500/15 text-purple-400 border-purple-500/30",
+                avatarGradient: "from-purple-500/20 to-indigo-900/40 border-purple-500/40",
+                avatarIcon: "music",
+                avatarIconColor: "text-purple-400",
+                price: 799,
+                originalPrice: 1799,
+                highlights: [
+                    "185 Colorful Kids Learning Videos",
+                    "Repeat-Watch Nursery & Fun Content",
+                    "Zero Copyright Issues"
+                ]
+            },
+            {
+                id: 6,
+                name: "Kids Quiz World",
+                handle: "@kidsquizworld01",
+                subs: "2.57K",
+                subsNumeric: 2570,
+                videos: "31",
+                niche: "Educational Quizzes & Trivia",
+                categoryTags: ["under999", "kids"],
+                verified: false,
+                badgeText: "EASY TO SCALE",
+                badgeColor: "bg-yellow-500/15 text-yellow-400 border-yellow-500/30",
+                avatarGradient: "from-yellow-500/20 to-amber-900/40 border-yellow-500/40",
+                avatarIcon: "lightbulb",
+                avatarIconColor: "text-yellow-400",
+                price: 599,
+                originalPrice: 1299,
+                highlights: [
+                    "Super Easy Canva/CapCut Quiz Format",
+                    "2.57K Active Quiz Subscribers",
+                    "Great Starter Faceless Asset"
+                ]
+            },
+            {
+                id: 7,
+                name: "Animal Park BD",
+                handle: "@AnimalParkBD",
+                subs: "1.06K",
+                subsNumeric: 1060,
+                videos: "20",
+                niche: "Animal Videos & Wildlife",
+                categoryTags: ["under999", "kids"],
+                verified: false,
+                badgeText: "STARTER DEAL • ₹499",
+                badgeColor: "bg-rose-500/15 text-rose-400 border-rose-500/30",
+                avatarGradient: "from-lime-500/20 to-green-900/40 border-lime-500/40",
+                avatarIcon: "paw-print",
+                avatarIconColor: "text-lime-400",
+                price: 499,
+                originalPrice: 999,
+                highlights: [
+                    "1K+ Subscriber Milestone Crossed",
+                    "Evergreen Viral Animal Niche",
+                    "Lowest Entry Price for Beginners"
+                ]
+            }
+        ];
+
+        let currentFilter = 'all';
+        let sellerCountryCode = localStorage.getItem('creatorVault_cc') || '91';
+        let sellerPhone = localStorage.getItem('creatorVault_wa') || '9929982533';
+        let clickLogs = JSON.parse(localStorage.getItem('creatorVault_leads') || '[]');
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const isAdminUrl = urlParams.has('admin') || window.location.hash.includes('admin');
+            
+            // Security Check: Show custom password modal when ?admin or #admin is in URL
+            if (isAdminUrl) {
+                const modal = document.getElementById('adminPasswordModal');
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                setTimeout(() => document.getElementById('adminPasswordInput').focus(), 100);
+            }
+
+            if (sellerPhone && sellerPhone !== 'XXXXXXXXXX') {
+                document.getElementById('sellerWhatsappInput').value = sellerPhone;
+            }
+            if (sellerCountryCode) {
+                const ccSelect = document.getElementById('countryCodeSelect');
+                if (ccSelect) ccSelect.value = sellerCountryCode;
+            }
+
+            updateGlobalWhatsappLinks();
+            renderChannels();
+            updateLeadsUI();
+            lucide.createIcons();
+        });
+
+        function verifyAdminPassword() {
+            const inputVal = document.getElementById('adminPasswordInput').value.trim();
+            const errorEl = document.getElementById('adminPassError');
+            if (inputVal === "637620") {
+                closeAdminModal();
+                document.getElementById('adminSetupBar').classList.remove('hidden');
+                showToast("Admin access unlocked!");
+            } else {
+                errorEl.classList.remove('hidden');
+            }
+        }
+
+        function closeAdminModal() {
+            const modal = document.getElementById('adminPasswordModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.getElementById('adminPassError').classList.add('hidden');
+            document.getElementById('adminPasswordInput').value = '';
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMessage').textContent = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+
+        function saveWhatsappNumber() {
+            const ccSelect = document.getElementById('countryCodeSelect').value;
+            const input = document.getElementById('sellerWhatsappInput').value.replace(/\D/g, '');
+            
+            if (input.length >= 6) {
+                sellerCountryCode = ccSelect;
+                sellerPhone = input;
+                localStorage.setItem('creatorVault_cc', sellerCountryCode);
+                localStorage.setItem('creatorVault_wa', sellerPhone);
+                updateGlobalWhatsappLinks();
+                renderChannels();
+                showToast(`WhatsApp updated to +${sellerCountryCode} ${sellerPhone}!`);
+            } else if (input.length === 0) {
+                sellerPhone = 'XXXXXXXXXX';
+                localStorage.removeItem('creatorVault_wa');
+                localStorage.removeItem('creatorVault_cc');
+                updateGlobalWhatsappLinks();
+                renderChannels();
+                showToast('Reset to default placeholder link.');
+            } else {
+                showToast('Please enter a valid phone number.');
+            }
+        }
+
+        // Generates clean, formatted WhatsApp message containing exact Channel details
+        function generateWhatsappMessage(channel) {
+            return `Hi! Mujhe aapka yeh YouTube Channel kharidna hai:\n• Channel: *${channel.name}* (${channel.handle})\n• Subscribers: ${channel.subs} | Videos: ${channel.videos}\n• Price: *₹${channel.price.toLocaleString('en-IN')}*\nPlease payment aur transfer details share karein.`;
+        }
+
+        function buildWhatsappUrl(channel) {
+            const rawMessage = generateWhatsappMessage(channel);
+            const fullNumber = (sellerCountryCode === 'other' ? '' : sellerCountryCode) + sellerPhone;
+            return `https://wa.me/${fullNumber}?text=${encodeURIComponent(rawMessage)}`;
+        }
+
+        function updateGlobalWhatsappLinks() {
+            const navBtn = document.getElementById('navWhatsappBtn');
+            const footerBtn = document.getElementById('footerWhatsappBtn');
+            const fullNumber = (sellerCountryCode === 'other' ? '' : sellerCountryCode) + sellerPhone;
+            const defaultMsg = "Hi! Mujhe aapke YouTube channels ke baare mein baat karni hai.";
+            navBtn.href = `https://wa.me/${fullNumber}?text=${encodeURIComponent(defaultMsg)}`;
+            footerBtn.href = `https://wa.me/${fullNumber}?text=${encodeURIComponent(defaultMsg)}`;
+        }
+
+        // Logs every Buy Now click with timestamp and opens WhatsApp seamlessly
+        function handleBuyClick(channelId) {
+            const channel = channelsData.find(c => c.id === channelId);
+            if (!channel) return;
+
+            const now = new Date();
+            const formattedTime = now.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit' }) + 
+                                  ' • ' + now.toLocaleDateString('en-IN', { day: '2-digit', month: 'short' });
+
+            const leadEntry = {
+                logId: Date.now(),
+                channelId: channel.id,
+                name: channel.name,
+                handle: channel.handle,
+                subs: channel.subs,
+                price: channel.price,
+                timestamp: formattedTime
+            };
+
+            clickLogs.unshift(leadEntry);
+            localStorage.setItem('creatorVault_leads', JSON.stringify(clickLogs));
+            updateLeadsUI();
+            showToast(`Tracked: ${channel.name} (₹${channel.price.toLocaleString('en-IN')})`);
+        }
+
+        function openPreviewModal(channelId) {
+            const channel = channelsData.find(c => c.id === channelId);
+            if (!channel) return;
+
+            const msg = generateWhatsappMessage(channel);
+            document.getElementById('previewMessageContent').textContent = msg;
+            const sendBtn = document.getElementById('previewSendBtn');
+            sendBtn.href = buildWhatsappUrl(channel);
+            sendBtn.onclick = () => handleBuyClick(channel.id);
+
+            const modal = document.getElementById('previewModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            lucide.createIcons();
+        }
+
+        function closePreviewModal() {
+            const modal = document.getElementById('previewModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function toggleLeadsDrawer() {
+            const drawer = document.getElementById('leadsDrawer');
+            const backdrop = document.getElementById('leadsDrawerBackdrop');
+            const isClosed = drawer.classList.contains('translate-x-full');
+
+            if (isClosed) {
+                backdrop.classList.remove('hidden');
+                drawer.classList.remove('translate-x-full');
+            } else {
+                drawer.classList.add('translate-x-full');
+                backdrop.classList.add('hidden');
+            }
+            lucide.createIcons();
+        }
+
+        function updateLeadsUI() {
+            const badge = document.getElementById('leadsBadgeCount');
+            const totalClicksEl = document.getElementById('drawerTotalClicks');
+            const totalValueEl = document.getElementById('drawerTotalValue');
+            const container = document.getElementById('leadsListContainer');
+
+            badge.textContent = clickLogs.length;
+            totalClicksEl.textContent = clickLogs.length;
+
+            const sumValue = clickLogs.reduce((acc, item) => acc + item.price, 0);
+            totalValueEl.textContent = '₹' + sumValue.toLocaleString('en-IN');
+
+            if (clickLogs.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-12 px-4 border border-dashed border-zinc-800 rounded-2xl">
+                        <i data-lucide="mouse-pointer-click" class="w-8 h-8 text-zinc-600 mx-auto mb-2"></i>
+                        <p class="text-sm font-semibold text-zinc-300">Abhi tak koi click nahi hua</p>
+                        <p class="text-xs text-zinc-500 mt-1">Jab bhi client kisi channel ke "Buy Now" par click karega, uska naam aur price yahan dikhega.</p>
+                    </div>
+                `;
+                lucide.createIcons();
+                return;
+            }
+
+            container.innerHTML = clickLogs.map((log, index) => `
+                <div class="p-3.5 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-between gap-3">
+                    <div class="min-w-0">
+                        <div class="flex items-center gap-2">
+                            <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-400">#${clickLogs.length - index}</span>
+                            <h4 class="font-bold text-sm text-white truncate">${log.name}</h4>
+                        </div>
+                        <p class="text-xs text-zinc-400 mt-0.5">${log.handle} • ${log.subs} Subs</p>
+                        <p class="text-[11px] text-zinc-500 mt-1 flex items-center gap-1">
+                            <i data-lucide="clock" class="w-3 h-3"></i>
+                            <span>${log.timestamp}</span>
+                        </p>
+                    </div>
+                    <div class="text-right shrink-0">
+                        <span class="block text-base font-display font-extrabold text-emerald-400">₹${log.price.toLocaleString('en-IN')}</span>
+                        <span class="text-[10px] text-zinc-500 uppercase font-semibold">Clicked</span>
+                    </div>
+                </div>
+            `).join('');
+            lucide.createIcons();
+        }
+
+        function exportLeadsLog() {
+            if (clickLogs.length === 0) {
+                showToast('No click logs to copy yet.');
+                return;
+            }
+            const reportLines = clickLogs.map((l, i) => `${i + 1}. ${l.name} (${l.handle}) - ₹${l.price} [${l.timestamp}]`);
+            const textToCopy = `My YouTube Channels Click Report:\n` + reportLines.join('\n');
+
+            const tempArea = document.createElement('textarea');
+            tempArea.value = textToCopy;
+            document.body.appendChild(tempArea);
+            tempArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempArea);
+            showToast('Click report copied to clipboard!');
+        }
+
+        function clearLeadsLog() {
+            clickLogs = [];
+            localStorage.removeItem('creatorVault_leads');
+            updateLeadsUI();
+            showToast('Seller click tracker reset!');
+        }
+
+        function setFilter(filter, btnElement) {
+            currentFilter = filter;
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('bg-red-600', 'text-white');
+                btn.classList.add('bg-zinc-900', 'text-zinc-400', 'border', 'border-zinc-800');
+            });
+            btnElement.classList.remove('bg-zinc-900', 'text-zinc-400', 'border', 'border-zinc-800');
+            btnElement.classList.add('bg-red-600', 'text-white');
+            renderChannels();
+        }
+
+        function filterChannels() {
+            renderChannels();
+        }
+
+        function renderChannels() {
+            const grid = document.getElementById('channelsGrid');
+            const emptyState = document.getElementById('emptyState');
+            const searchQuery = document.getElementById('searchInput').value.toLowerCase().trim();
+
+            const filtered = channelsData.filter(channel => {
+                const matchesTab = currentFilter === 'all' || channel.categoryTags.includes(currentFilter);
+                const matchesSearch = 
+                    channel.name.toLowerCase().includes(searchQuery) ||
+                    channel.handle.toLowerCase().includes(searchQuery) ||
+                    channel.niche.toLowerCase().includes(searchQuery);
+                return matchesTab && matchesSearch;
+            });
+
+            if (filtered.length === 0) {
+                grid.innerHTML = '';
+                emptyState.classList.remove('hidden');
+                lucide.createIcons();
+                return;
+            }
+
+            emptyState.classList.add('hidden');
+            grid.innerHTML = filtered.map(channel => {
+                const waUrl = buildWhatsappUrl(channel);
+                const verifiedBadge = channel.verified 
+                    ? `<i data-lucide="badge-check" class="w-4 h-4 text-sky-400 ml-1 shrink-0" title="Verified Channel"></i>` 
+                    : '';
+
+                return `
+                <div class="channel-card rounded-2xl bg-cardbg border border-cardborder p-6 flex flex-col justify-between relative overflow-hidden">
+                    <!-- Top Promo Tag & Message Preview Button -->
+                    <div class="flex items-center justify-between gap-2 mb-5">
+                        <span class="px-2.5 py-1 rounded-lg text-[11px] font-bold tracking-wide border ${channel.badgeColor}">
+                            ${channel.badgeText}
+                        </span>
+                        <button 
+                            onclick="openPreviewModal(${channel.id})" 
+                            class="text-[11px] font-medium text-zinc-400 hover:text-emerald-400 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 px-2 py-1 rounded-lg transition inline-flex items-center gap-1 cursor-pointer"
+                            title="Preview WhatsApp message sent on click"
+                        >
+                            <i data-lucide="eye" class="w-3 h-3"></i>
+                            <span>Msg Preview</span>
+                        </button>
+                    </div>
+
+                    <!-- Channel Identity Header -->
+                    <div>
+                        <div class="flex items-center gap-4 mb-5">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br ${channel.avatarGradient} border flex items-center justify-center shrink-0 shadow-inner">
+                                <i data-lucide="${channel.avatarIcon}" class="w-7 h-7 ${channel.avatarIconColor}"></i>
+                            </div>
+                            <div class="min-w-0">
+                                <h3 class="font-display font-bold text-lg text-white truncate flex items-center">
+                                    <span class="truncate">${channel.name}</span>
+                                    ${verifiedBadge}
+                                </h3>
+                                <p class="text-zinc-400 text-xs sm:text-sm truncate">${channel.handle}</p>
+                                <span class="inline-block mt-1 text-[11px] font-medium text-zinc-300 bg-zinc-800/90 px-2 py-0.5 rounded-md">
+                                    ${channel.niche}
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Stats Row -->
+                        <div class="grid grid-cols-2 gap-3 p-3 rounded-xl bg-zinc-950/90 border border-zinc-800/80 mb-5">
+                            <div>
+                                <p class="text-[11px] text-zinc-500 uppercase font-semibold">Subscribers</p>
+                                <p class="text-base sm:text-lg font-extrabold text-white">${channel.subs}</p>
+                            </div>
+                            <div class="border-l border-zinc-800 pl-3">
+                                <p class="text-[11px] text-zinc-500 uppercase font-semibold">Total Videos</p>
+                                <p class="text-base sm:text-lg font-extrabold text-white">${channel.videos}</p>
+                            </div>
+                        </div>
+
+                        <!-- Key Highlights -->
+                        <ul class="space-y-2 mb-6">
+                            ${channel.highlights.map(item => `
+                                <li class="flex items-start gap-2 text-xs sm:text-sm text-zinc-300">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-400 mt-0.5 shrink-0"></i>
+                                    <span>${item}</span>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+
+                    <!-- Price & Buy Now CTA -->
+                    <div class="pt-4 border-t border-zinc-800/80 flex items-center justify-between gap-3">
+                        <div>
+                            <div class="flex items-center gap-1.5">
+                                <span class="text-xs text-zinc-500 line-through">₹${channel.originalPrice.toLocaleString('en-IN')}</span>
+                                <span class="text-[10px] font-bold text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded">SAVE ${Math.round((1 - channel.price / channel.originalPrice) * 100)}%</span>
+                            </div>
+                            <div class="text-2xl font-display font-extrabold text-white">
+                                ₹${channel.price.toLocaleString('en-IN')}
+                            </div>
+                        </div>
+
+                        <a 
+                            href="${waUrl}" 
+                            onclick="handleBuyClick(${channel.id})"
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            class="px-5 py-3 rounded-xl bg-whatsapp hover:bg-whatsappDark text-zinc-950 font-extrabold text-sm transition shadow-lg shadow-emerald-500/20 flex items-center gap-2 shrink-0"
+                        >
+                            <i data-lucide="message-circle" class="w-4 h-4 fill-zinc-950"></i>
+                            <span>Buy Now</span>
+                        </a>
+                    </div>
+                </div>
+                `;
+            }).join('');
+            lucide.createIcons();
+        }
+    </script>
+</body>
+</html>
